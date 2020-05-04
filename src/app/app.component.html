@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <!-- <h3>{{ bdate | date }}</h3>
+    <h3>{{ name | uppercase }}</h3>
+    <h3>{{ age | async }}</h3>
+    <h3>{{ car | json | uppercase }}</h3> -->
+    <!-- <h3>{{ 1.4 | roundNum: false }}</h3> -->
+    <div *ngFor="let user of users | arrange: propSort | filterage: 20">
+        <h3>{{ user.name }}</h3>
+        <p>Age: {{ user.age }}</p>
+        <p>Height: {{ user.height }}</p>
+    </div>
+    <button (click)="setPropSort('name')">name</button>
+    <button (click)="setPropSort('age')">age</button>
+    <button (click)="setPropSort('height')">height</button>
+</div>
